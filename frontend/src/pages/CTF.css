@@ -1,0 +1,43 @@
+.ctf-page {
+  min-height: 90vh;
+  background: #020617;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.ctf-page h1 {
+  color: #00e5ff;
+  font-size: 45px;
+}
+
+.ctf-page p {
+  color: #cbd5e1;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  width: 260px;
+  background: #111827;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+}
+
+.card h2 {
+  color: #00e5ff;
+}
+
+.card span {
+  display: block;
+  margin-top: 15px;
+  color: #22c55e;
+  font-weight: bold;
+}

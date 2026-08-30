@@ -1,0 +1,276 @@
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:280px;
+    height:100vh;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(18px);
+    border-right:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    padding:25px;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.logo-icon{
+    font-size:42px;
+    color:#38bdf8;
+}
+
+.logo h2{
+    color:white;
+    margin:0;
+    font-size:28px;
+}
+
+.logo span{
+    color:#94a3b8;
+    font-size:13px;
+}
+
+nav{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.nav-link{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:15px 18px;
+
+    text-decoration:none;
+    color:#cbd5e1;
+
+    border-radius:14px;
+
+    transition:.3s;
+}
+
+.nav-link svg{
+    font-size:20px;
+}
+
+.nav-link:hover{
+    background:#1e293b;
+    color:white;
+    transform:translateX(8px);
+}
+
+.active{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    box-shadow:0 8px 20px rgba(59,130,246,.35);
+}
+
+.xp-card{
+
+    margin-top:30px;
+
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.xp-card h3{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-bottom:12px;
+
+}
+
+.xp-card h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.logout-btn{
+
+    margin-top:20px;
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#ef4444;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-3px);
+
+}
+
+@media(max-width:900px){
+
+.sidebar{
+
+    width:85px;
+
+    padding:15px;
+
+}
+
+.logo h2,
+.logo span,
+.nav-link{
+    font-size:0;
+}
+
+.logo-icon{
+
+    font-size:36px;
+
+}
+
+.nav-link{
+
+    justify-content:center;
+
+}
+
+.nav-link svg{
+
+    font-size:22px;
+
+}
+
+.xp-card{
+
+    display:none;
+
+}
+
+.logout-btn{
+
+    padding:14px;
+
+    font-size:0;
+
+}
+
+.logout-btn svg{
+
+    font-size:20px;
+
+}
+
+}
+
+/* =========================
+   CyberVerse Theme
+========================= */
+
+/* Dark Mode */
+
+body.dark-theme .sidebar {
+    background: #0b0f19;
+    color: #ffffff;
+}
+
+body.dark-theme .sidebar .nav-link {
+    color: #cbd5e1;
+}
+
+body.dark-theme .sidebar .nav-link:hover,
+body.dark-theme .sidebar .nav-link.active {
+    color: #ffffff;
+    background: #1e293b;
+}
+
+body.dark-theme .sidebar .xp-card {
+    background: #111827;
+    border-color: #1f2937;
+    color: #ffffff;
+}
+
+/* Light Mode */
+
+body.light-theme .sidebar {
+    background: #ffffff;
+    color: #111827;
+    border-right: 1px solid #e2e8f0;
+}
+
+body.light-theme .sidebar .nav-link {
+    color: #475569;
+}
+
+body.light-theme .sidebar .nav-link:hover,
+body.light-theme .sidebar .nav-link.active {
+    color: #111827;
+    background: #e2e8f0;
+}
+
+body.light-theme .sidebar .xp-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+    color: #111827;
+}
+
+body.light-theme .sidebar .xp-card p {
+    color: #64748b;
+}
+
+body.light-theme .sidebar .logo span {
+    color: #64748b;
+}
+
+body.light-theme .sidebar .logo h2 {
+    color: #111827;
+}
+
+

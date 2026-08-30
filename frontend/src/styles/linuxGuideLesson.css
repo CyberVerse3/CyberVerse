@@ -1,0 +1,586 @@
+/* =========================================
+   LINUX LESSON PAGE
+========================================= */
+
+.linux-lesson-page {
+    min-height: 100vh;
+    padding: 35px 40px 70px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(0, 255, 170, 0.06),
+            transparent 35%
+        ),
+        #050b12;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.linux-lesson-topbar {
+    max-width: 1000px;
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #687784;
+
+    font-size: 13px;
+}
+
+
+.linux-lesson-back {
+    color: #00ffaa;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.linux-lesson-back:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.linux-lesson-progress {
+    max-width: 1000px;
+    margin: 0 auto 45px;
+}
+
+
+.linux-lesson-progress-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+
+    color: #748390;
+
+    font-size: 12px;
+}
+
+
+.linux-lesson-progress-bar {
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+.linux-lesson-progress-bar div {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #00ffaa;
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 170, 0.35);
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.linux-lesson-header {
+    max-width: 1000px;
+    margin: 0 auto 45px;
+}
+
+
+.linux-lesson-module {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(0, 255, 170, 0.2);
+
+    border-radius: 20px;
+
+    background: rgba(0, 255, 170, 0.05);
+
+    color: #00ffaa;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.linux-lesson-header h1 {
+    margin: 0;
+
+    font-size: clamp(36px, 5vw, 58px);
+
+    line-height: 1.1;
+}
+
+
+.linux-lesson-header p {
+    max-width: 700px;
+
+    margin: 18px 0 22px;
+
+    color: #8796a3;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.linux-lesson-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.linux-lesson-meta span {
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #8998a5;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.linux-lesson-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.linux-lesson-card {
+    margin-bottom: 18px;
+
+    padding: 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 16px;
+
+    background:
+        rgba(9, 18, 27, 0.88);
+}
+
+
+.linux-lesson-card h2 {
+    margin: 0 0 18px;
+
+    font-size: 24px;
+}
+
+
+.linux-lesson-card p {
+    margin: 0 0 16px;
+
+    color: #9aa8b4;
+
+    line-height: 1.85;
+}
+
+
+.linux-lesson-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   CONCEPT CARDS
+========================================= */
+
+.linux-lesson-concept {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.linux-lesson-concept div {
+    padding: 18px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(0, 255, 170, 0.1);
+
+    background: rgba(0, 255, 170, 0.035);
+}
+
+
+.linux-lesson-concept strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #00ffaa;
+
+    font-size: 15px;
+}
+
+
+.linux-lesson-concept span {
+    color: #788895;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.linux-lesson-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin: 22px 0 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.linux-lesson-list li {
+    padding: 13px 15px;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #8b99a6;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   KNOWLEDGE CHECK
+========================================= */
+
+.linux-lesson-check {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    border: 1px solid rgba(0, 255, 170, 0.18);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 255, 170, 0.05),
+            rgba(9, 18, 27, 0.9)
+        );
+}
+
+
+.linux-lesson-check > div > span {
+    color: #00ffaa;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.linux-lesson-check h2 {
+    margin: 8px 0;
+
+    font-size: 23px;
+}
+
+
+.linux-lesson-check p {
+    margin: 0;
+
+    color: #7e8c98;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   COMPLETE BUTTON
+========================================= */
+
+.linux-lesson-complete {
+    flex-shrink: 0;
+
+    min-height: 50px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #00ffaa;
+
+    color: #03100b;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.linux-lesson-complete:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(0, 255, 170, 0.25);
+}
+
+
+.linux-lesson-complete.completed {
+    background: rgba(0, 255, 170, 0.12);
+
+    color: #00ffaa;
+
+    border: 1px solid rgba(0, 255, 170, 0.25);
+
+    cursor: default;
+}
+
+
+.linux-lesson-complete.completed:hover {
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.linux-lesson-navigation {
+    max-width: 1000px;
+
+    margin: 30px auto 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.linux-lesson-nav-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 45px;
+
+    padding: 0 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.linux-lesson-nav-btn.next {
+    border-color: rgba(0, 255, 170, 0.2);
+
+    background: rgba(0, 255, 170, 0.07);
+
+    color: #00ffaa;
+}
+
+
+.linux-lesson-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+.linux-lesson-nav-btn.next:hover {
+    background: rgba(0, 255, 170, 0.12);
+}
+
+
+.linux-lesson-nav-btn.disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   NOT FOUND
+========================================= */
+
+.linux-lesson-not-found {
+    max-width: 600px;
+
+    margin: 120px auto;
+
+    padding: 50px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    background: rgba(9, 18, 27, 0.9);
+}
+
+
+.linux-lesson-not-found-icon {
+    margin-bottom: 15px;
+
+    font-size: 60px;
+}
+
+
+.linux-lesson-not-found h1 {
+    margin: 0 0 10px;
+}
+
+
+.linux-lesson-not-found p {
+    margin-bottom: 25px;
+
+    color: #7d8b98;
+}
+
+
+.linux-lesson-back-btn {
+    display: inline-flex;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    background: #00ffaa;
+
+    color: #03100b;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .linux-lesson-page {
+        padding: 25px 20px 50px;
+    }
+
+
+    .linux-lesson-topbar {
+        align-items: flex-start;
+    }
+
+
+    .linux-lesson-header h1 {
+        font-size: 38px;
+    }
+
+
+    .linux-lesson-card {
+        padding: 24px 20px;
+    }
+
+
+    .linux-lesson-concept {
+        grid-template-columns: 1fr;
+    }
+
+
+    .linux-lesson-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .linux-lesson-check {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px 20px;
+    }
+
+
+    .linux-lesson-complete {
+        width: 100%;
+    }
+
+
+    .linux-lesson-navigation {
+        gap: 10px;
+    }
+
+}

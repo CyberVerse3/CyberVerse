@@ -1,0 +1,133 @@
+.web-lab{
+    min-height:100vh;
+    background:linear-gradient(135deg,#020617,#07152d,#0b2447);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.browser{
+    width:900px;
+    max-width:100%;
+    background:#0f172a;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 0 35px rgba(0,140,255,.35);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.browser-header{
+    background:#1e293b;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.browser-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.browser-buttons span{
+    width:13px;
+    height:13px;
+    border-radius:50%;
+}
+
+.red{
+    background:#ff5f57;
+}
+
+.yellow{
+    background:#ffbd2f;
+}
+
+.green{
+    background:#28c840;
+}
+
+.url-bar{
+    flex:1;
+    background:#0f172a;
+    color:#9ecfff;
+    padding:10px 18px;
+    border-radius:10px;
+    font-size:14px;
+}
+
+.browser-body{
+    padding:50px;
+    color:white;
+    text-align:center;
+}
+
+.browser-body h1{
+    color:#4fc3ff;
+    font-size:40px;
+}
+
+.subtitle{
+    color:#94a3b8;
+    margin-bottom:35px;
+}
+
+.login-box{
+    width:420px;
+    max-width:100%;
+    margin:auto;
+    background:#172554;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid rgba(79,195,255,.3);
+}
+
+.login-box h2{
+    margin-bottom:20px;
+}
+
+.login-box input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+}
+
+.login-box input:focus{
+    outline:none;
+    box-shadow:0 0 12px #38bdf8;
+}
+
+.login-box button{
+    width:100%;
+    margin-top:18px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#0ea5e9;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.login-box button:hover{
+    background:#38bdf8;
+    transform:scale(1.03);
+}
+
+.mission{
+    margin-top:40px;
+    padding:20px;
+    border-radius:12px;
+    background:#082f49;
+    border-left:5px solid #38bdf8;
+}
+
+.mission h3{
+    color:#38bdf8;
+}

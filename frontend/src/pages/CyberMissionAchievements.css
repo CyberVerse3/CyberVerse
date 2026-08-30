@@ -1,0 +1,525 @@
+/* ============================================================
+   CYBERVERSE — CYBER MISSION ACHIEVEMENTS
+   ============================================================ */
+
+.cyber-achievements-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(0, 255, 170, 0.08),
+            transparent 35%
+        ),
+        #05080d;
+    color: #e8fdf6;
+}
+
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.cyber-achievements-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.cyber-achievements-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cyber-achievements-eyebrow {
+    margin-bottom: 16px;
+
+    color: #00ffaa;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.cyber-achievements-header h1 {
+    margin: 0;
+
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.cyber-achievements-header p {
+    max-width: 680px;
+
+    margin: 20px auto 0;
+
+    color: #8da8a1;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   OVERVIEW
+   ============================================================ */
+
+.cyber-achievements-overview {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.achievement-overview-stat {
+    padding: 26px;
+
+    text-align: center;
+
+    background: rgba(8, 17, 23, 0.9);
+
+    border: 1px solid rgba(0, 255, 170, 0.12);
+
+    border-radius: 16px;
+}
+
+.achievement-overview-stat span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 28px;
+}
+
+.achievement-overview-stat strong {
+    display: block;
+
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.achievement-overview-stat small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #718d85;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* ============================================================
+   PROGRESS
+   ============================================================ */
+
+.cyber-achievements-progress {
+    padding: 22px 24px;
+
+    margin-bottom: 65px;
+
+    background: rgba(8, 17, 23, 0.9);
+
+    border: 1px solid rgba(0, 255, 170, 0.12);
+
+    border-radius: 14px;
+}
+
+.achievement-progress-label {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    color: #8da8a1;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.achievement-progress-label strong {
+    color: #00ffaa;
+}
+
+.achievement-progress-track {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 20px;
+}
+
+.achievement-progress-fill {
+    height: 100%;
+
+    background: #00ffaa;
+
+    border-radius: inherit;
+
+    transition: width 0.5s ease;
+}
+
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.cyber-achievements-section {
+    margin-bottom: 60px;
+}
+
+.cyber-achievements-section-title {
+    display: flex;
+
+    align-items: center;
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+.cyber-achievements-section-title span {
+    color: #00ffaa;
+
+    font-family: monospace;
+
+    font-size: 13px;
+}
+
+.cyber-achievements-section-title h2 {
+    margin: 0;
+
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.cyber-achievements-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* ============================================================
+   ACHIEVEMENT CARD
+   ============================================================ */
+
+.cyber-achievement-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    min-height: 155px;
+
+    padding: 24px;
+
+    background: rgba(8, 17, 23, 0.9);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cyber-achievement-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ============================================================
+   EARNED
+   ============================================================ */
+
+.achievement-earned {
+    border-color: rgba(0, 255, 170, 0.22);
+
+    box-shadow:
+        0 0 25px rgba(0, 255, 170, 0.04);
+}
+
+.achievement-earned:hover {
+    border-color: rgba(0, 255, 170, 0.4);
+}
+
+
+/* ============================================================
+   LOCKED
+   ============================================================ */
+
+.achievement-locked {
+    opacity: 0.58;
+}
+
+.achievement-locked:hover {
+    opacity: 0.75;
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.achievement-icon {
+    flex-shrink: 0;
+
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 255, 170, 0.06);
+
+    border: 1px solid rgba(0, 255, 170, 0.12);
+
+    border-radius: 14px;
+
+    font-size: 32px;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-status {
+    margin-bottom: 7px;
+
+    color: #00ffaa;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.achievement-locked .achievement-status {
+    color: #657a74;
+}
+
+.achievement-content h3 {
+    margin: 0 0 9px;
+
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.achievement-content p {
+    margin: 0;
+
+    color: #819b94;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   BADGE TYPES
+   ============================================================ */
+
+.achievement-bronze.achievement-earned {
+    border-color: rgba(205, 127, 50, 0.3);
+}
+
+.achievement-silver.achievement-earned {
+    border-color: rgba(192, 192, 192, 0.3);
+}
+
+.achievement-gold.achievement-earned {
+    border-color: rgba(255, 215, 0, 0.35);
+}
+
+
+/* ============================================================
+   MISSION STATS
+   ============================================================ */
+
+.achievement-mission-stats {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 16px;
+}
+
+.achievement-mission-stats span {
+    padding: 5px 9px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 6px;
+
+    color: #91aaa3;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.cyber-achievements-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    margin-top: 30px;
+}
+
+.cyber-achievements-actions button {
+    min-width: 190px;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cyber-achievements-actions button:hover {
+    transform: translateY(-2px);
+}
+
+.cyber-achievements-secondary {
+    background: transparent;
+
+    color: #9bb4ad;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cyber-achievements-secondary:hover {
+    color: #e8fdf6;
+
+    border-color: rgba(0, 255, 170, 0.3);
+}
+
+.cyber-achievements-primary {
+    background: #00ffaa;
+
+    color: #03110c;
+
+    border: 1px solid #00ffaa;
+}
+
+.cyber-achievements-primary:hover {
+    background: #33ffbb;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 850px) {
+
+    .cyber-achievements-container {
+        padding: 50px 0 80px;
+    }
+
+    .cyber-achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .cyber-achievements-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-achievement-card {
+        flex-direction: column;
+    }
+
+    .achievement-icon {
+        width: 58px;
+        height: 58px;
+    }
+
+    .cyber-achievements-actions {
+        flex-direction: column;
+    }
+
+    .cyber-achievements-actions button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .cyber-achievements-container {
+        width: 90%;
+    }
+
+    .cyber-achievements-header h1 {
+        font-size: 42px;
+    }
+
+    .cyber-achievements-progress {
+        padding: 18px;
+    }
+
+    .cyber-achievement-card {
+        padding: 20px;
+    }
+
+}

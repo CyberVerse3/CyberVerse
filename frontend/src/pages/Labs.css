@@ -1,0 +1,138 @@
+.labs-page {
+  min-height: 90vh;
+  background: #020617;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+
+.labs-page h1 {
+  color: #00e5ff;
+  font-size: 45px;
+}
+
+
+.labs-page p {
+  color: #cbd5e1;
+}
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+
+.card {
+  width: 260px;
+  background: #111827;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+}
+
+
+.card h2 {
+  color: #00e5ff;
+}
+.search-box{
+
+    margin:30px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.search-box input{
+
+    width:420px;
+
+    max-width:90%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+
+    background:#111827;
+
+    color:white;
+
+    border:1px solid #334155;
+
+}
+
+.card p{
+
+    margin:10px 0;
+
+    color:#d1d5db;
+
+}
+
+.card strong{
+
+    color:#22c55e;
+
+}
+
+.card button{
+
+    margin-top:20px;
+
+}
+/* ===== Status ===== */
+
+.status{
+    margin-top:10px;
+    font-weight:bold;
+    padding:8px 12px;
+    border-radius:10px;
+    display:inline-block;
+}
+
+.completed{
+    background:#14532d;
+    color:#4ade80;
+}
+
+.progress{
+    background:#78350f;
+    color:#facc15;
+}
+
+/* ===== Difficulty ===== */
+
+.difficulty{
+    margin-left:8px;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.easy{
+    background:#14532d;
+    color:#4ade80;
+}
+
+.medium{
+    background:#78350f;
+    color:#facc15;
+}
+
+.hard{
+    background:#7f1d1d;
+    color:#f87171;
+}

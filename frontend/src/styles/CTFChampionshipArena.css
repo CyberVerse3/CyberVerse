@@ -1,0 +1,250 @@
+.championship-arena {
+    min-height: 100vh;
+    padding: 50px;
+    background: #050816;
+    color: #ffffff;
+}
+
+.arena-header {
+    max-width: 900px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.arena-icon {
+    font-size: 55px;
+}
+
+.arena-header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.arena-header p {
+    margin: 8px 0 0;
+    color: #9ca3af;
+}
+
+.arena-progress {
+    max-width: 900px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #9ca3af;
+}
+
+.arena-progress strong {
+    color: #ffffff;
+}
+
+.arena-progress-bar {
+    max-width: 900px;
+    height: 10px;
+
+    margin: 12px auto 30px;
+
+    background: #1f2937;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.arena-progress-bar div {
+    height: 100%;
+    background: #22c55e;
+
+    transition: width 0.3s ease;
+}
+
+.championship-question {
+    max-width: 900px;
+    margin: auto;
+
+    padding: 35px;
+
+    background: #0b1120;
+
+    border: 1px solid #1f2937;
+
+    border-radius: 20px;
+}
+
+.question-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 12px;
+
+    background: #111827;
+
+    border-radius: 8px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+.championship-question h2 {
+    margin: 25px 0;
+
+    font-size: 26px;
+}
+
+.answer-list {
+    display: grid;
+    gap: 12px;
+}
+
+.answer-option {
+    width: 100%;
+
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    text-align: left;
+
+    background: #111827;
+
+    border: 1px solid #1f2937;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.answer-option:hover {
+    border-color: #22c55e;
+}
+
+.answer-option.selected {
+    border-color: #22c55e;
+    background: #13251c;
+}
+
+.answer-option span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1f2937;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+.next-btn,
+.championship-btn,
+.secondary-btn {
+    margin-top: 25px;
+
+    padding: 13px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.next-btn,
+.championship-btn {
+    background: #22c55e;
+    color: #ffffff;
+}
+
+.next-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.secondary-btn {
+    margin-left: 10px;
+
+    background: #1f2937;
+    color: #ffffff;
+}
+
+.championship-result {
+    max-width: 700px;
+
+    margin: 60px auto;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background: #0b1120;
+
+    border: 1px solid #1f2937;
+
+    border-radius: 22px;
+}
+
+.result-icon {
+    font-size: 70px;
+}
+
+.championship-result h1 {
+    margin: 20px 0 10px;
+}
+
+.championship-result p {
+    color: #9ca3af;
+}
+
+.final-score {
+    margin: 30px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.final-score strong {
+    font-size: 42px;
+}
+
+.final-score span {
+    color: #22c55e;
+    font-size: 20px;
+}
+
+@media (max-width: 700px) {
+
+    .championship-arena {
+        padding: 25px 15px;
+    }
+
+    .arena-header {
+        align-items: flex-start;
+    }
+
+    .arena-header h1 {
+        font-size: 24px;
+    }
+
+    .championship-question {
+        padding: 22px;
+    }
+
+    .championship-question h2 {
+        font-size: 21px;
+    }
+}

@@ -1,0 +1,1696 @@
+/* ============================================================
+   CYBERVERSE — CYBER MISSION GAME
+   ============================================================ */
+
+.cyber-game-page {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0, 255, 200, 0.08),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(0, 120, 255, 0.06),
+            transparent 30%
+        ),
+        #05070b;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   BACKGROUND GRID
+   ============================================================ */
+
+.cyber-game-page::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 255, 200, 0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 200, 0.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.cyber-game-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+    padding: 45px 0 80px;
+}
+
+/* ============================================================
+   BRIEFING
+   ============================================================ */
+
+.cyber-game-briefing {
+    max-width: 850px;
+
+    margin: 20px auto 0;
+
+    padding: 45px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(0, 255, 200, 0.12);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.01)
+        );
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.35);
+
+    animation:
+        cyberFadeIn 0.5s ease;
+}
+
+/* ============================================================
+   CLASSIFIED
+   ============================================================ */
+
+.cyber-game-classified {
+    margin-bottom: 15px;
+
+    color: #00ffc8;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    opacity: 0.8;
+}
+
+/* ============================================================
+   MISSION ICON
+   ============================================================ */
+
+.cyber-game-mission-icon {
+    width: 90px;
+    height: 90px;
+
+    margin: 10px auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(0, 255, 200, 0.25);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 255, 200, 0.055);
+
+    font-size: 40px;
+
+    box-shadow:
+        0 0 35px rgba(0, 255, 200, 0.12);
+
+    animation:
+        cyberFloat 3s ease-in-out infinite;
+}
+
+/* ============================================================
+   MISSION NUMBER
+   ============================================================ */
+
+.cyber-game-number {
+    color: #66727e;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.cyber-game-briefing h1 {
+    margin: 8px 0;
+
+    font-size: clamp(35px, 6vw, 58px);
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+}
+
+/* ============================================================
+   DIFFICULTY
+   ============================================================ */
+
+.cyber-game-difficulty {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border:
+        1px solid rgba(0, 255, 200, 0.18);
+
+    border-radius: 5px;
+
+    color: #00ffc8;
+
+    background:
+        rgba(0, 255, 200, 0.04);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.cyber-game-description {
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    color: #7d8994;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+/* ============================================================
+   STORY
+   ============================================================ */
+
+.cyber-game-story {
+    margin: 30px 0;
+
+    padding: 22px;
+
+    text-align: left;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    border-left:
+        3px solid #00ffc8;
+
+    border-radius: 8px;
+
+    background:
+        rgba(0, 255, 200, 0.025);
+}
+
+.cyber-game-story-label {
+    margin-bottom: 9px;
+
+    color: #00ffc8;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.cyber-game-story p {
+    margin: 0;
+
+    color: #89949f;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+/* ============================================================
+   INFO GRID
+   ============================================================ */
+
+.cyber-game-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.cyber-game-info-grid > div {
+    padding: 17px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.055);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.018);
+}
+
+.cyber-game-info-grid span {
+    font-size: 18px;
+}
+
+.cyber-game-info-grid strong {
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+.cyber-game-info-grid small {
+    color: #59646f;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+   TIMER INFO
+   ============================================================ */
+
+.cyber-game-timer-info {
+    margin: 20px auto;
+
+    color: #ffbd45;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.cyber-game-briefing-actions,
+.cyber-game-result-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.cyber-game-primary,
+.cyber-game-secondary {
+    min-height: 45px;
+
+    padding: 0 22px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.cyber-game-primary {
+    border:
+        1px solid #00ffc8;
+
+    background:
+        #00ffc8;
+
+    color: #03100d;
+}
+
+.cyber-game-primary:hover:not(:disabled) {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 30px rgba(0, 255, 200, 0.25);
+}
+
+.cyber-game-primary:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.35;
+}
+
+.cyber-game-secondary {
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color: #7d8994;
+}
+
+.cyber-game-secondary:hover {
+    border-color:
+        rgba(0, 255, 200, 0.25);
+
+    color: #00ffc8;
+}
+
+/* ============================================================
+   GAME HUD
+   ============================================================ */
+
+.cyber-game-hud {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================================
+   HUD LEFT
+   ============================================================ */
+
+.cyber-game-hud-left {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.hud-mission {
+    color: #00ffc8;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.cyber-game-hud-left strong {
+    font-size: 13px;
+}
+
+/* ============================================================
+   HUD CENTER
+   ============================================================ */
+
+.cyber-game-hud-center {
+    display: flex;
+
+    gap: 20px;
+}
+
+.hud-stat {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #77828d;
+
+    font-size: 14px;
+}
+
+.hud-stat strong {
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+/* ============================================================
+   HUD RIGHT
+   ============================================================ */
+
+.cyber-game-hud-right {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.hud-lives {
+    display: flex;
+
+    gap: 3px;
+}
+
+.hud-lives span {
+    font-size: 14px;
+
+    transition:
+        opacity 0.2s ease,
+        filter 0.2s ease;
+}
+
+.life-active {
+    opacity: 1;
+}
+
+.life-lost {
+    opacity: 0.12;
+
+    filter: grayscale(1);
+}
+
+.hud-timer {
+    min-width: 65px;
+
+    color: #ffbd45;
+
+    font-family: monospace;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    text-align: right;
+}
+
+.timer-danger {
+    color: #ff4e68;
+
+    animation:
+        timerPulse 0.8s infinite;
+}
+
+/* ============================================================
+   PROGRESS
+   ============================================================ */
+
+.cyber-game-progress {
+    margin: 22px 0 25px;
+}
+
+.progress-label {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    color: #596570;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+.progress-track {
+    height: 4px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+}
+
+.progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        #00ffc8;
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 200, 0.5);
+
+    transition:
+        width 0.4s ease;
+}
+
+/* ============================================================
+   EVENT ALERT
+   ============================================================ */
+
+.cyber-game-event {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+
+    padding: 15px 18px;
+
+    border:
+        1px solid rgba(255, 75, 95, 0.25);
+
+    border-left:
+        3px solid #ff4e68;
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 50, 70, 0.045);
+
+    animation:
+        cyberAlert 0.35s ease;
+}
+
+.cyber-game-event > span {
+    font-size: 20px;
+}
+
+.cyber-game-event strong {
+    color: #ff6177;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.cyber-game-event p {
+    margin: 5px 0 0;
+
+    color: #8d7479;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+/* ============================================================
+   CHALLENGE
+   ============================================================ */
+
+.cyber-game-challenge {
+    padding: 35px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.065);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.012)
+        );
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.3);
+
+    animation:
+        cyberFadeIn 0.35s ease;
+}
+
+/* ============================================================
+   CHALLENGE TYPE
+   ============================================================ */
+
+.challenge-type {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 5px 9px;
+
+    border:
+        1px solid rgba(0, 255, 200, 0.15);
+
+    border-radius: 4px;
+
+    color: #00ffc8;
+
+    background:
+        rgba(0, 255, 200, 0.035);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.cyber-game-challenge h1 {
+    margin: 5px 0 12px;
+
+    font-size: clamp(25px, 4vw, 38px);
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+.challenge-description {
+    max-width: 800px;
+
+    margin-bottom: 25px;
+
+    color: #78848f;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+/* ============================================================
+   CHALLENGE DATA
+   ============================================================ */
+
+.challenge-data {
+    margin: 25px 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(0, 255, 200, 0.09);
+
+    border-radius: 8px;
+
+    background:
+        #070a0e;
+
+    font-family:
+        "Courier New",
+        monospace;
+}
+
+.data-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 13px 15px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.045);
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.data-row span {
+    min-width: 75px;
+
+    color: #4e5a65;
+
+    font-size: 8px;
+
+    font-weight: 900;
+}
+
+.data-row strong {
+    color: #9aa5ae;
+
+    font-size: 11px;
+
+    word-break: break-word;
+}
+
+.data-message {
+    padding: 18px;
+
+    color: #a3adb5;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    white-space: pre-wrap;
+}
+
+.data-link {
+    padding: 13px 15px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.045);
+
+    color: #ff6579;
+
+    font-size: 11px;
+
+    word-break: break-all;
+}
+
+/* ============================================================
+   NETWORK CONNECTIONS
+   ============================================================ */
+
+.network-connections {
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.connection-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr auto auto;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.035);
+
+    border-radius: 5px;
+
+    color: #8d99a3;
+
+    font-size: 10px;
+}
+
+.connection-row span:nth-child(2) {
+    color: #00ffc8;
+}
+
+/* ============================================================
+   EVIDENCE
+   ============================================================ */
+
+.evidence-list {
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.evidence-list div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 11px;
+
+    color: #89949e;
+
+    font-size: 10px;
+}
+
+.evidence-list span {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 4px;
+
+    color: #00ffc8;
+
+    background:
+        rgba(0, 255, 200, 0.06);
+}
+
+/* ============================================================
+   QUESTION
+   ============================================================ */
+
+.challenge-question {
+    margin: 30px 0 18px;
+}
+
+.question-label {
+    margin-bottom: 8px;
+
+    color: #596671;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.challenge-question h2 {
+    margin: 0;
+
+    color: #dce2e6;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+/* ============================================================
+   OPTIONS
+   ============================================================ */
+
+.challenge-options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.challenge-option {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px;
+
+    text-align: left;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.065);
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.018);
+
+    color: #8e99a3;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.challenge-option:hover:not(:disabled) {
+    transform:
+        translateX(3px);
+
+    border-color:
+        rgba(0, 255, 200, 0.25);
+
+    background:
+        rgba(0, 255, 200, 0.025);
+
+    color: #c5cdd2;
+}
+
+.challenge-option:disabled {
+    cursor: default;
+}
+
+.option-letter {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 5px;
+
+    color: #5e6973;
+
+    font-size: 9px;
+
+    font-weight: 900;
+}
+
+.option-text {
+    flex: 1;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.option-selected {
+    border-color:
+        rgba(0, 255, 200, 0.4);
+
+    background:
+        rgba(0, 255, 200, 0.06);
+
+    color: #ffffff;
+}
+
+.option-selected .option-letter {
+    border-color: #00ffc8;
+
+    color: #00ffc8;
+}
+
+.option-correct {
+    border-color:
+        rgba(0, 255, 140, 0.45);
+
+    background:
+        rgba(0, 255, 140, 0.06);
+
+    color: #8dffcc;
+}
+
+.option-correct .option-letter {
+    border-color: #00ff8c;
+
+    color: #00ff8c;
+}
+
+.option-wrong {
+    border-color:
+        rgba(255, 60, 85, 0.45);
+
+    background:
+        rgba(255, 60, 85, 0.055);
+
+    color: #ff8493;
+}
+
+.option-wrong .option-letter {
+    border-color: #ff4e68;
+
+    color: #ff4e68;
+}
+
+/* ============================================================
+   TOOLS
+   ============================================================ */
+
+.challenge-tools {
+    margin-top: 20px;
+}
+
+.hint-button {
+    padding: 9px 13px;
+
+    border:
+        1px solid rgba(255, 190, 60, 0.18);
+
+    border-radius: 6px;
+
+    background:
+        rgba(255, 190, 60, 0.035);
+
+    color: #c79a48;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.hint-button:hover:not(:disabled) {
+    border-color:
+        rgba(255, 190, 60, 0.4);
+
+    color: #ffca62;
+}
+
+.hint-button:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+}
+
+.hint-box {
+    margin-top: 10px;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid rgba(255, 190, 60, 0.13);
+
+    border-left:
+        2px solid #d99f32;
+
+    border-radius: 6px;
+
+    background:
+        rgba(255, 190, 60, 0.025);
+
+    animation:
+        cyberFadeIn 0.25s ease;
+}
+
+.hint-box strong {
+    color: #dca63b;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+.hint-box p {
+    margin: 6px 0 0;
+
+    color: #88785a;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+/* ============================================================
+   FEEDBACK
+   ============================================================ */
+
+.challenge-feedback {
+    margin-top: 20px;
+
+    padding: 15px 17px;
+
+    border-radius: 7px;
+
+    animation:
+        cyberFadeIn 0.25s ease;
+}
+
+.challenge-feedback strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.challenge-feedback p {
+    margin: 0;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+.feedback-correct {
+    border:
+        1px solid rgba(0, 255, 150, 0.16);
+
+    background:
+        rgba(0, 255, 150, 0.035);
+
+    color: #79dcb3;
+}
+
+.feedback-wrong {
+    border:
+        1px solid rgba(255, 60, 85, 0.16);
+
+    background:
+        rgba(255, 60, 85, 0.035);
+
+    color: #dc7b89;
+}
+
+/* ============================================================
+   CHALLENGE ACTIONS
+   ============================================================ */
+
+.challenge-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 25px;
+}
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
+
+.cyber-game-results {
+    max-width: 800px;
+
+    margin: 20px auto;
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0.01)
+        );
+
+    animation:
+        cyberFadeIn 0.5s ease;
+}
+
+.cyber-game-result-icon {
+    width: 95px;
+    height: 95px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 45px;
+
+    animation:
+        cyberFloat 3s ease-in-out infinite;
+}
+
+.mission-success
+.cyber-game-result-icon {
+    border:
+        1px solid rgba(0, 255, 200, 0.25);
+
+    background:
+        rgba(0, 255, 200, 0.06);
+
+    box-shadow:
+        0 0 45px rgba(0, 255, 200, 0.13);
+}
+
+.mission-failed
+.cyber-game-result-icon {
+    border:
+        1px solid rgba(255, 60, 85, 0.25);
+
+    background:
+        rgba(255, 60, 85, 0.05);
+
+    box-shadow:
+        0 0 45px rgba(255, 60, 85, 0.1);
+}
+
+.cyber-game-results h1 {
+    margin: 10px 0;
+
+    font-size: clamp(32px, 6vw, 52px);
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+.mission-success h1 {
+    color: #00ffc8;
+
+    text-shadow:
+        0 0 25px rgba(0, 255, 200, 0.2);
+}
+
+.mission-failed h1 {
+    color: #ff536a;
+}
+
+.cyber-game-results > p {
+    max-width: 600px;
+
+    margin: 15px auto 30px;
+
+    color: #77838e;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+/* ============================================================
+   RESULT STATS
+   ============================================================ */
+
+.cyber-game-result-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin: 30px 0;
+}
+
+.cyber-game-result-stats > div {
+    padding: 17px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.055);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.018);
+}
+
+.cyber-game-result-stats span {
+    font-size: 18px;
+}
+
+.cyber-game-result-stats strong {
+    color: #ffffff;
+
+    font-size: 19px;
+}
+
+.cyber-game-result-stats small {
+    color: #596570;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+   UNLOCK MESSAGE
+   ============================================================ */
+
+.cyber-game-unlocked-message {
+    margin: 25px 0;
+
+    padding: 13px;
+
+    border:
+        1px solid rgba(0, 255, 200, 0.16);
+
+    border-radius: 6px;
+
+    background:
+        rgba(0, 255, 200, 0.035);
+
+    color: #00ffc8;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    animation:
+        cyberMissionUnlock 1.5s ease-in-out infinite;
+}
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.cyber-game-error {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.cyber-game-error-icon {
+    margin-bottom: 15px;
+
+    font-size: 55px;
+}
+
+.cyber-game-error h1 {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+}
+
+.cyber-game-error p {
+    margin-bottom: 25px;
+
+    color: #717d88;
+
+    font-size: 12px;
+}
+
+.cyber-game-error button {
+    padding: 12px 18px;
+
+    border:
+        1px solid rgba(0, 255, 200, 0.25);
+
+    border-radius: 6px;
+
+    background:
+        rgba(0, 255, 200, 0.04);
+
+    color: #00ffc8;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes cyberFadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+@keyframes cyberFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-6px);
+    }
+
+}
+
+@keyframes timerPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+
+}
+
+@keyframes cyberAlert {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+@keyframes cyberMissionUnlock {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 rgba(0, 255, 200, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px rgba(0, 255, 200, 0.12);
+    }
+
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+    .cyber-game-container {
+        width:
+            min(100% - 25px, 700px);
+
+        padding-top: 30px;
+    }
+
+    .cyber-game-hud {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .cyber-game-hud-center {
+        justify-content: flex-end;
+    }
+
+    .cyber-game-hud-right {
+        grid-column: 1 / -1;
+
+        justify-content: space-between;
+
+        padding-top: 10px;
+
+        border-top:
+            1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cyber-game-result-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .cyber-game-briefing,
+    .cyber-game-results {
+        padding: 30px 18px;
+    }
+
+    .cyber-game-info-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .cyber-game-briefing-actions,
+    .cyber-game-result-actions {
+        flex-direction: column;
+    }
+
+    .cyber-game-primary,
+    .cyber-game-secondary {
+        width: 100%;
+    }
+
+    .cyber-game-challenge {
+        padding: 22px 16px;
+    }
+
+    .cyber-game-hud {
+        padding: 13px;
+    }
+
+    .cyber-game-hud-left strong {
+        font-size: 11px;
+    }
+
+    .challenge-question h2 {
+        font-size: 15px;
+    }
+
+    .connection-row {
+        grid-template-columns:
+            1fr auto 1fr;
+
+        font-size: 9px;
+    }
+
+    .connection-row span:nth-child(4),
+    .connection-row span:nth-child(5) {
+        display: none;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .cyber-game-container {
+        width:
+            calc(100% - 18px);
+    }
+
+    .cyber-game-info-grid {
+        gap: 7px;
+    }
+
+    .cyber-game-info-grid > div {
+        padding: 13px 6px;
+    }
+
+    .cyber-game-result-stats {
+        gap: 7px;
+    }
+
+    .cyber-game-result-stats > div {
+        padding: 13px 5px;
+    }
+
+    .challenge-option {
+        padding: 11px;
+    }
+
+    .option-letter {
+        width: 25px;
+        height: 25px;
+    }
+
+}

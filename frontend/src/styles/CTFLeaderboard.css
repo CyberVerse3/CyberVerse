@@ -1,0 +1,323 @@
+css
+/* =========================
+   CTF LEADERBOARD
+========================= */
+
+.leaderboard-page {
+    min-height: 100vh;
+    padding: 50px 30px 80px;
+    background: #050816;
+    color: #ffffff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.leaderboard-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.leaderboard-header h1 {
+    margin: 0 0 12px;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.leaderboard-header p {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 16px;
+}
+
+
+/* =========================
+   LIST
+========================= */
+
+.leaderboard-list {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* =========================
+   PLAYER CARD
+========================= */
+
+.leaderboard-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 95px;
+    padding: 18px 24px;
+
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+
+    background: #0b1120;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.leaderboard-card:hover {
+    transform: translateY(-3px);
+    border-color: #374151;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   RANK
+========================= */
+
+.rank {
+    width: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   PLAYER INFO
+========================= */
+
+.player-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.player-info h2 {
+    margin: 0 0 7px;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player-info p {
+    margin: 0;
+
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+
+/* =========================
+   PLAYER STATS
+========================= */
+
+.player-stats {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    min-width: 180px;
+}
+
+.player-stats div {
+    min-width: 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-stats strong {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.player-stats span {
+    margin-top: 4px;
+
+    color: #6b7280;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+
+/* =========================
+   TOP 3
+========================= */
+
+.top-player {
+    border-color: #374151;
+}
+
+
+/* First Place */
+
+.leaderboard-card:nth-child(1) {
+    border-width: 2px;
+}
+
+
+/* Second Place */
+
+.leaderboard-card:nth-child(2) {
+    border-width: 2px;
+}
+
+
+/* Third Place */
+
+.leaderboard-card:nth-child(3) {
+    border-width: 2px;
+}
+
+
+/* =========================
+   CURRENT USER
+========================= */
+
+.current-user {
+    border-width: 2px;
+    border-color: #38bdf8;
+
+    background: #0c1628;
+
+    box-shadow:
+        0 0 0 1px rgba(56, 189, 248, 0.15),
+        0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.current-user:hover {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.15),
+        0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   YOU LABEL
+========================= */
+
+.you-label {
+    display: inline-block;
+
+    margin-left: 8px;
+    padding: 4px 8px;
+
+    border-radius: 6px;
+
+    background: #38bdf8;
+    color: #020617;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    vertical-align: middle;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .leaderboard-page {
+        padding: 35px 16px 60px;
+    }
+
+    .leaderboard-header h1 {
+        font-size: 32px;
+    }
+
+    .leaderboard-card {
+        padding: 16px;
+    }
+
+    .rank {
+        width: 55px;
+        font-size: 21px;
+    }
+
+    .player-info h2 {
+        font-size: 16px;
+    }
+
+    .player-info p {
+        font-size: 12px;
+    }
+
+    .player-stats {
+        gap: 18px;
+        min-width: 120px;
+    }
+
+    .player-stats strong {
+        font-size: 17px;
+    }
+
+    .player-stats span {
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .leaderboard-card {
+        min-height: auto;
+        padding: 14px 12px;
+    }
+
+    .rank {
+        width: 42px;
+        font-size: 18px;
+    }
+
+    .player-info h2 {
+        font-size: 14px;
+    }
+
+    .player-info p {
+        font-size: 11px;
+    }
+
+    .player-stats {
+        gap: 10px;
+        min-width: 90px;
+    }
+
+    .player-stats strong {
+        font-size: 15px;
+    }
+
+    .player-stats span {
+        font-size: 9px;
+    }
+
+    .you-label {
+        margin-left: 4px;
+        padding: 3px 5px;
+        font-size: 8px;
+    }
+}
+

@@ -1,0 +1,840 @@
+/* ============================================================
+   CYBERVERSE — NETWORKING GUIDE LESSON
+   ============================================================ */
+
+.networking-lesson-page {
+    min-height: 100vh;
+    background: #05070d;
+    color: #ffffff;
+}
+
+/* ============================================================
+   MAIN CONTAINER
+   ============================================================ */
+
+.networking-lesson-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 25px 80px;
+}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+
+.networking-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.networking-breadcrumb button {
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #00eaff;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.networking-breadcrumb button:hover {
+    text-decoration: underline;
+}
+
+.networking-breadcrumb span {
+    white-space: nowrap;
+}
+
+/* ============================================================
+   LESSON HEADER
+   ============================================================ */
+
+.networking-lesson-header {
+    position: relative;
+
+    margin-bottom: 35px;
+    padding: 40px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 234, 255, 0.07),
+            rgba(124, 58, 237, 0.06)
+        );
+
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+}
+
+.networking-lesson-header::before {
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+    right: -100px;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 234, 255, 0.05);
+
+    filter: blur(40px);
+
+    pointer-events: none;
+}
+
+.networking-lesson-module {
+    display: inline-block;
+
+    margin-bottom: 15px;
+    padding: 7px 14px;
+
+    border: 1px solid rgba(0, 234, 255, 0.3);
+    border-radius: 20px;
+
+    background: rgba(0, 234, 255, 0.05);
+
+    color: #00eaff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.networking-lesson-header h1 {
+    position: relative;
+
+    margin: 0 0 15px;
+
+    font-size: 40px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #00eaff
+    );
+
+    -webkit-background-clip: text;
+ background-clip: text;
+    -webkit-text-fill-color: transparent;
+color: transparent; 
+}
+
+.networking-lesson-header p {
+    position: relative;
+
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.networking-lesson-xp-badge {
+    position: absolute;
+
+    top: 35px;
+    right: 35px;
+
+    padding: 9px 15px;
+
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    border-radius: 20px;
+
+    background: rgba(167, 139, 250, 0.08);
+
+    color: #a78bfa;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* ============================================================
+   COMMON CARDS
+   ============================================================ */
+
+.networking-content-card,
+.networking-objectives-card,
+.networking-commands-card,
+.networking-quiz-card {
+    margin-bottom: 25px;
+    padding: 30px;
+
+    background: #0b0f19;
+
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+}
+
+.networking-content-card h2,
+.networking-objectives-card h2,
+.networking-commands-card h2,
+.networking-quiz-card h2 {
+    margin: 0 0 22px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 750;
+}
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.networking-content {
+    color: #c7ced9;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.networking-content p {
+    margin: 0 0 17px;
+}
+
+.networking-content p:last-child {
+    margin-bottom: 0;
+}
+
+.networking-content-space {
+    height: 8px;
+}
+
+/* ============================================================
+   OBJECTIVES
+   ============================================================ */
+
+.networking-objectives {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.networking-objective {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    border: 1px solid rgba(0, 234, 255, 0.08);
+    border-radius: 10px;
+
+    background: rgba(0, 234, 255, 0.025);
+}
+
+.networking-objective span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(34, 197, 94, 0.1);
+
+    color: #22c55e;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.networking-objective p {
+    margin: 1px 0 0;
+
+    color: #c7ced9;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   COMMANDS
+   ============================================================ */
+
+.networking-commands-card > p {
+    margin: -10px 0 20px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.networking-command-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.networking-command {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    overflow-x: auto;
+
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+
+    background: #05070d;
+}
+
+.networking-command span {
+    color: #22c55e;
+
+    font-family: monospace;
+    font-weight: 800;
+}
+
+.networking-command code {
+    color: #e5e7eb;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+/* ============================================================
+   QUIZ HEADER
+   ============================================================ */
+
+.networking-quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.networking-quiz-header span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #00eaff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.networking-quiz-header h2 {
+    margin: 0;
+}
+
+.networking-quiz-header > div:last-child {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+/* ============================================================
+   QUESTIONS
+   ============================================================ */
+
+.networking-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.networking-question {
+    padding: 20px;
+
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+
+    background: #080c14;
+}
+
+.networking-question h3 {
+    margin: 0 0 17px;
+
+    color: #e5e7eb;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   OPTIONS
+   ============================================================ */
+
+.networking-options {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.networking-option {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #263244;
+    border-radius: 9px;
+
+    background: #0b0f19;
+
+    color: #aeb7c5;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.networking-option:hover:not(:disabled) {
+    border-color: rgba(0, 234, 255, 0.4);
+
+    background: rgba(0, 234, 255, 0.035);
+
+    color: #ffffff;
+}
+
+.networking-option > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 27px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #374151;
+    border-radius: 7px;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.networking-option.selected {
+    border-color: #00eaff;
+
+    background: rgba(0, 234, 255, 0.07);
+
+    color: #ffffff;
+}
+
+.networking-option.selected > span {
+    border-color: #00eaff;
+
+    color: #00eaff;
+}
+
+.networking-option.correct {
+    border-color: #22c55e;
+
+    background: rgba(34, 197, 94, 0.08);
+
+    color: #ffffff;
+}
+
+.networking-option.correct > span {
+    border-color: #22c55e;
+
+    color: #22c55e;
+}
+
+.networking-option.wrong {
+    border-color: #ef4444;
+
+    background: rgba(239, 68, 68, 0.08);
+
+    color: #ffffff;
+}
+
+.networking-option.wrong > span {
+    border-color: #ef4444;
+
+    color: #ef4444;
+}
+
+/* ============================================================
+   SUBMIT QUIZ
+   ============================================================ */
+
+.networking-submit-quiz {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.networking-submit-quiz:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.networking-submit-quiz:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+}
+
+/* ============================================================
+   QUIZ RESULT
+   ============================================================ */
+
+.networking-quiz-result {
+    margin-top: 25px;
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.networking-quiz-result h3 {
+    margin: 0 0 8px;
+
+    font-size: 20px;
+}
+
+.networking-quiz-result p {
+    margin: 5px 0;
+
+    font-size: 13px;
+}
+
+.networking-quiz-result.passed {
+    border: 1px solid rgba(34, 197, 94, 0.3);
+
+    background: rgba(34, 197, 94, 0.07);
+
+    color: #22c55e;
+}
+
+.networking-quiz-result.failed {
+    border: 1px solid rgba(239, 68, 68, 0.3);
+
+    background: rgba(239, 68, 68, 0.07);
+
+    color: #ef4444;
+}
+
+/* ============================================================
+   COMPLETE SECTION
+   ============================================================ */
+
+.networking-complete-section {
+    display: flex;
+    justify-content: center;
+
+    margin: 35px 0;
+}
+
+.networking-complete-button {
+    min-width: 240px;
+
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.networking-complete-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.networking-complete-button:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+}
+
+.networking-completed-message {
+    padding: 14px 25px;
+
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 10px;
+
+    background: rgba(34, 197, 94, 0.07);
+
+    color: #22c55e;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* ============================================================
+   LESSON NAVIGATION
+   ============================================================ */
+
+.networking-lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #1f2937;
+}
+
+.networking-lesson-navigation button {
+    padding: 12px 18px;
+
+    border: 1px solid #263244;
+    border-radius: 9px;
+
+    background: #0b0f19;
+
+    color: #aeb7c5;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.networking-lesson-navigation button:hover:not(:disabled) {
+    border-color: #00eaff;
+
+    color: #00eaff;
+
+    background: rgba(0, 234, 255, 0.04);
+}
+
+.networking-lesson-navigation button.next {
+    border-color: rgba(0, 234, 255, 0.3);
+
+    color: #00eaff;
+}
+
+.networking-lesson-navigation button:disabled {
+    opacity: 0.3;
+
+    cursor: not-allowed;
+}
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.networking-error {
+    padding: 70px 30px;
+
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+
+    background: #0b0f19;
+
+    text-align: center;
+}
+
+.networking-error h1 {
+    margin: 0 0 12px;
+
+    font-size: 28px;
+}
+
+.networking-error p {
+    margin-bottom: 25px;
+
+    color: #6b7280;
+}
+
+.networking-error button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .networking-lesson-container {
+        padding: 30px 15px 60px;
+    }
+
+    .networking-lesson-header {
+        padding: 30px 22px;
+    }
+
+    .networking-lesson-header h1 {
+        font-size: 30px;
+
+        padding-right: 0;
+    }
+
+    .networking-lesson-header p {
+        font-size: 14px;
+    }
+
+    .networking-lesson-xp-badge {
+        position: static;
+
+        display: inline-block;
+
+        margin-top: 20px;
+    }
+
+    .networking-content-card,
+    .networking-objectives-card,
+    .networking-commands-card,
+    .networking-quiz-card {
+        padding: 22px 18px;
+    }
+
+    .networking-quiz-header {
+        align-items: flex-start;
+    }
+
+    .networking-question {
+        padding: 16px;
+    }
+
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .networking-breadcrumb {
+        gap: 6px;
+
+        font-size: 10px;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+    .networking-breadcrumb button {
+        font-size: 10px;
+    }
+
+    .networking-lesson-header h1 {
+        font-size: 25px;
+    }
+
+    .networking-lesson-header {
+        padding: 25px 18px;
+    }
+
+    .networking-content {
+        font-size: 14px;
+    }
+
+    .networking-option {
+        font-size: 12px;
+
+        padding: 11px;
+    }
+
+    .networking-lesson-navigation {
+        flex-direction: column;
+    }
+
+    .networking-lesson-navigation button {
+        width: 100%;
+    }
+
+}

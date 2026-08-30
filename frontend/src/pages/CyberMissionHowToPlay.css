@@ -1,0 +1,436 @@
+/* ============================================================
+   CYBERVERSE — CYBER MISSION HOW TO PLAY
+   ============================================================ */
+
+.cyber-how-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(0, 255, 170, 0.08),
+            transparent 35%
+        ),
+        #05080d;
+    color: #e8fdf6;
+}
+
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.cyber-how-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 70px 0 100px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.cyber-how-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cyber-how-eyebrow {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #00ffaa;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.cyber-how-header h1 {
+    margin: 0;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.cyber-how-header h1 span {
+    color: #00ffaa;
+}
+
+.cyber-how-header p {
+    max-width: 650px;
+    margin: 22px auto 0;
+    color: #8da8a1;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   GENERAL CARD
+   ============================================================ */
+
+.cyber-how-card {
+    background: rgba(8, 17, 23, 0.88);
+    border: 1px solid rgba(0, 255, 170, 0.12);
+    border-radius: 16px;
+    padding: 28px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cyber-how-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 255, 170, 0.3);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ============================================================
+   OBJECTIVE
+   ============================================================ */
+
+.cyber-how-objective {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 70px;
+}
+
+.cyber-how-icon {
+    min-width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 255, 170, 0.08);
+    border: 1px solid rgba(0, 255, 170, 0.2);
+    border-radius: 14px;
+
+    font-size: 28px;
+}
+
+.cyber-how-objective h2,
+.cyber-how-tips h2 {
+    margin: 0 0 12px;
+
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.cyber-how-objective p {
+    margin: 7px 0;
+    color: #8da8a1;
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.cyber-how-section {
+    margin-bottom: 70px;
+}
+
+.cyber-how-section-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+.cyber-how-section-title span {
+    color: #00ffaa;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.cyber-how-section-title h2 {
+    margin: 0;
+
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.cyber-how-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.cyber-how-card-icon {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.cyber-how-card h3 {
+    margin: 0 0 12px;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.cyber-how-card p {
+    margin: 0;
+
+    color: #819b94;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   REWARDS
+   ============================================================ */
+
+.cyber-how-rewards {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.cyber-how-reward {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding: 24px;
+
+    background: rgba(8, 17, 23, 0.88);
+    border: 1px solid rgba(0, 255, 170, 0.12);
+    border-radius: 16px;
+}
+
+.cyber-how-reward > span {
+    font-size: 32px;
+}
+
+.cyber-how-reward h3 {
+    margin: 0 0 8px;
+
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.cyber-how-reward p {
+    margin: 0;
+
+    color: #819b94;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+
+.cyber-how-badges {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.cyber-how-badge {
+    text-align: center;
+
+    padding: 32px 24px;
+
+    background: rgba(8, 17, 23, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.cyber-how-badge:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 170, 0.25);
+}
+
+.cyber-how-badge > div {
+    font-size: 52px;
+    margin-bottom: 14px;
+}
+
+.cyber-how-badge h3 {
+    margin: 0 0 10px;
+
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.cyber-how-badge p {
+    margin: 0;
+
+    color: #819b94;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   TIPS
+   ============================================================ */
+
+.cyber-how-tips {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    margin-bottom: 50px;
+}
+
+.cyber-how-tips ul {
+    margin: 0;
+    padding-left: 20px;
+
+    color: #819b94;
+}
+
+.cyber-how-tips li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.cyber-how-tips li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.cyber-how-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    margin-top: 30px;
+}
+
+.cyber-how-actions button {
+    min-width: 190px;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.cyber-how-actions button:hover {
+    transform: translateY(-2px);
+}
+
+.cyber-how-secondary {
+    background: transparent;
+    color: #9bb4ad;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cyber-how-secondary:hover {
+    border-color: rgba(0, 255, 170, 0.3);
+    color: #e8fdf6;
+}
+
+.cyber-how-primary {
+    background: #00ffaa;
+    color: #03110c;
+
+    border: 1px solid #00ffaa;
+}
+
+.cyber-how-primary:hover {
+    background: #33ffbb;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+    .cyber-how-container {
+        padding: 50px 0 80px;
+    }
+
+    .cyber-how-grid,
+    .cyber-how-rewards {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-how-badges {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-how-objective,
+    .cyber-how-tips {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .cyber-how-container {
+        width: 90%;
+    }
+
+    .cyber-how-header {
+        margin-bottom: 40px;
+    }
+
+    .cyber-how-header h1 {
+        font-size: 42px;
+    }
+
+    .cyber-how-card {
+        padding: 22px;
+    }
+
+    .cyber-how-section {
+        margin-bottom: 50px;
+    }
+
+    .cyber-how-actions {
+        flex-direction: column;
+    }
+
+    .cyber-how-actions button {
+        width: 100%;
+    }
+
+}

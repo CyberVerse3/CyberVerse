@@ -1,0 +1,660 @@
+/* ============================================================
+   CYBERVERSE — CYBER MISSION
+   HOME SCREEN
+   ============================================================ */
+
+.cyber-mission-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(0, 255, 200, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(0, 140, 255, 0.06),
+            transparent 30%
+        ),
+        #05070b;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.cyber-mission-home {
+    position: relative;
+    min-height: calc(100vh - 70px);
+    padding: 80px 25px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ============================================================
+   BACKGROUND GRID
+   ============================================================ */
+
+.cyber-mission-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 255, 200, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 200, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+
+    pointer-events: none;
+}
+
+/* ============================================================
+   SCANLINE
+   ============================================================ */
+
+.cyber-mission-home::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 4px,
+            rgba(255, 255, 255, 0.012) 5px
+        );
+
+    pointer-events: none;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.cyber-mission-hero {
+    position: relative;
+    z-index: 2;
+
+    width: min(900px, 100%);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation:
+        cyberMissionFadeIn 0.8s ease forwards;
+}
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.cyber-mission-icon {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    border: 1px solid rgba(0, 255, 200, 0.35);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 255, 200, 0.12),
+            rgba(0, 255, 200, 0.02)
+        );
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 25px rgba(0, 255, 200, 0.15),
+        inset 0 0 20px rgba(0, 255, 200, 0.08);
+
+    margin-bottom: 25px;
+
+    animation:
+        cyberMissionPulse 2.5s infinite;
+}
+
+/* ============================================================
+   CLASSIFIED LABEL
+   ============================================================ */
+
+.cyber-mission-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    color: #00ffc8;
+
+    opacity: 0.8;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+}
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.cyber-mission-hero h1 {
+    margin: 0;
+
+    font-size: clamp(55px, 9vw, 110px);
+
+    line-height: 0.9;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.08),
+        0 0 35px rgba(0, 255, 200, 0.08);
+}
+
+.cyber-mission-hero h1 span {
+    display: block;
+
+    color: #00ffc8;
+
+    text-shadow:
+        0 0 10px rgba(0, 255, 200, 0.7),
+        0 0 35px rgba(0, 255, 200, 0.35),
+        0 0 70px rgba(0, 255, 200, 0.15);
+}
+
+/* ============================================================
+   LINE
+   ============================================================ */
+
+.cyber-mission-line {
+    width: 180px;
+    height: 2px;
+
+    margin: 30px 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00ffc8,
+        transparent
+    );
+
+    box-shadow:
+        0 0 15px rgba(0, 255, 200, 0.6);
+}
+
+/* ============================================================
+   SUBTITLE
+   ============================================================ */
+
+.cyber-mission-subtitle {
+    max-width: 700px;
+
+    margin: 0;
+
+    font-size: clamp(19px, 3vw, 26px);
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    color: #ffffff;
+}
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.cyber-mission-description {
+    max-width: 650px;
+
+    margin: 16px auto 0;
+
+    color: #8e9aa8;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+/* ============================================================
+   START BUTTON
+   ============================================================ */
+
+.cyber-mission-start {
+    position: relative;
+
+    margin-top: 40px;
+
+    min-width: 270px;
+    height: 65px;
+
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    border: 1px solid #00ffc8;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 255, 200, 0.18),
+            rgba(0, 255, 200, 0.04)
+        );
+
+    color: #00ffc8;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 15px rgba(0, 255, 200, 0.18),
+        inset 0 0 20px rgba(0, 255, 200, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.cyber-mission-start::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.16),
+            transparent
+        );
+
+    transition: left 0.6s ease;
+}
+
+.cyber-mission-start:hover::before {
+    left: 120%;
+}
+
+.cyber-mission-start:hover {
+    transform: translateY(-4px) scale(1.02);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 255, 200, 0.28),
+            rgba(0, 255, 200, 0.08)
+        );
+
+    box-shadow:
+        0 0 20px rgba(0, 255, 200, 0.4),
+        0 0 60px rgba(0, 255, 200, 0.12),
+        inset 0 0 25px rgba(0, 255, 200, 0.08);
+}
+
+.cyber-mission-start:active {
+    transform: translateY(-1px) scale(0.99);
+}
+
+.cyber-mission-start-icon {
+    font-size: 20px;
+}
+
+/* ============================================================
+   QUICK ACTIONS
+   ============================================================ */
+
+.cyber-mission-actions {
+    position: relative;
+    z-index: 2;
+
+    width: min(800px, 100%);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    margin-top: 55px;
+}
+
+/* ============================================================
+   ACTION CARD
+   ============================================================ */
+
+.cyber-mission-action {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cyber-mission-action:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(0, 255, 200, 0.35);
+
+    background:
+        rgba(0, 255, 200, 0.045);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(0, 255, 200, 0.06);
+}
+
+.cyber-mission-action-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background:
+        rgba(0, 255, 200, 0.08);
+
+    font-size: 24px;
+}
+
+.cyber-mission-action span:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    flex: 1;
+}
+
+.cyber-mission-action strong {
+    font-size: 14px;
+}
+
+.cyber-mission-action small {
+    color: #7d8996;
+    font-size: 11px;
+}
+
+.cyber-mission-action b {
+    color: #00ffc8;
+    font-size: 22px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.cyber-mission-action:hover b {
+    transform: translateX(5px);
+}
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.cyber-mission-status {
+    position: relative;
+    z-index: 2;
+
+    width: min(800px, 100%);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+.cyber-mission-status-card {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+.status-icon {
+    font-size: 25px;
+}
+
+.cyber-mission-status-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cyber-mission-status-card strong {
+    color: #00ffc8;
+    font-size: 18px;
+}
+
+.cyber-mission-status-card small {
+    color: #727d88;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+   WARNING
+   ============================================================ */
+
+.cyber-mission-warning {
+    position: relative;
+    z-index: 2;
+
+    width: min(800px, 100%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 25px;
+    padding: 16px 20px;
+
+    border: 1px solid rgba(255, 180, 0, 0.18);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 180, 0, 0.035);
+}
+
+.cyber-mission-warning > span {
+    font-size: 22px;
+}
+
+.cyber-mission-warning p {
+    margin: 0;
+
+    color: #777f89;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.cyber-mission-warning strong {
+    color: #d5a52a;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes cyberMissionFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes cyberMissionPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 25px rgba(0, 255, 200, 0.15),
+            inset 0 0 20px rgba(0, 255, 200, 0.08);
+    }
+
+    50% {
+        box-shadow:
+            0 0 45px rgba(0, 255, 200, 0.3),
+            0 0 80px rgba(0, 255, 200, 0.08),
+            inset 0 0 25px rgba(0, 255, 200, 0.12);
+    }
+
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .cyber-mission-home {
+        padding:
+            55px 18px 45px;
+    }
+
+    .cyber-mission-hero h1 {
+        font-size: 62px;
+        letter-spacing: -3px;
+    }
+
+    .cyber-mission-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-mission-status {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-mission-start {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .cyber-mission-label {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .cyber-mission-hero h1 {
+        font-size: 48px;
+    }
+
+    .cyber-mission-subtitle {
+        font-size: 17px;
+    }
+
+    .cyber-mission-description {
+        font-size: 13px;
+    }
+
+    .cyber-mission-action {
+        padding: 15px;
+    }
+
+}

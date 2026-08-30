@@ -1,0 +1,157 @@
+.arena{
+    min-height:100vh;
+    padding:40px;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+    color:white;
+}
+
+.arena-hero{
+    text-align:center;
+    padding:50px 30px;
+    border-radius:25px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    margin-bottom:40px;
+}
+
+.arena-hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.arena-hero p{
+    font-size:20px;
+    opacity:.9;
+}
+
+.arena-stats{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.arena-stats div{
+    min-width:180px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    border-radius:18px;
+}
+
+.arena-stats h2{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.challenge-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.challenge-card{
+    padding:25px;
+    border-radius:22px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.challenge-card:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+.challenge-card.easy{
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+}
+
+.challenge-card.medium{
+    background:linear-gradient(135deg,#ca8a04,#facc15);
+    color:#111827;
+}
+
+.challenge-card.hard{
+    background:linear-gradient(135deg,#dc2626,#ef4444);
+}
+
+.difficulty{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:999px;
+    background:rgba(255,255,255,.2);
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.challenge-card h2{
+    margin-bottom:15px;
+}
+
+.challenge-card p{
+    min-height:70px;
+    line-height:1.6;
+}
+
+.category{
+    margin:20px 0;
+    font-weight:bold;
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:25px;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.bottom button{
+    border:none;
+    padding:12px 22px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+    background:white;
+    color:#111827;
+    transition:.3s;
+}
+
+.bottom button:hover:not(:disabled){
+    transform:scale(1.05);
+}
+
+.bottom button:disabled{
+    cursor:not-allowed;
+    opacity:.65;
+}
+
+@media(max-width:768px){
+
+    .arena{
+        padding:20px;
+    }
+
+    .arena-hero h1{
+        font-size:34px;
+    }
+
+    .arena-stats{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .arena-stats div{
+        width:100%;
+        max-width:300px;
+    }
+
+    .challenge-grid{
+        grid-template-columns:1fr;
+    }
+
+}

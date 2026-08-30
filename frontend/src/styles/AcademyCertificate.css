@@ -1,0 +1,285 @@
+.certificate-page{
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#050816,#0f172a,#111827);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px;
+
+}
+
+.certificate{
+
+    width:1000px;
+
+    max-width:100%;
+
+    background:#0f172a;
+
+    border:4px solid #7c3aed;
+
+    border-radius:25px;
+
+    padding:60px;
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 25px #7c3aed,
+    0 0 60px #6d28d9;
+
+}
+
+.academy{
+
+    color:#a855f7;
+
+    letter-spacing:6px;
+
+    margin-bottom:20px;
+
+}
+
+.certificate h1{
+
+    font-size:48px;
+
+    color:#fbbf24;
+
+}
+
+.student{
+
+    margin:35px 0;
+
+    font-size:42px;
+
+    color:#38bdf8;
+
+}
+
+.courses{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin:40px 0;
+
+}
+
+.courses span{
+
+    background:#1e293b;
+
+    padding:12px;
+
+    border-radius:10px;
+
+}
+
+.info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:50px;
+
+}
+
+.signature{
+
+    margin-top:70px;
+
+    text-align:right;
+
+    font-size:18px;
+
+}
+.logo{
+
+    font-size:90px;
+
+    margin-bottom:20px;
+
+    animation: glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        filter:drop-shadow(0 0 5px #38bdf8);
+
+    }
+
+    to{
+
+        filter:drop-shadow(0 0 25px #a855f7);
+
+    }
+
+}
+.signature{
+
+    margin-top:70px;
+
+    text-align:right;
+
+}
+
+.signature-image{
+
+    width:220px;
+
+    margin-bottom:10px;
+
+    filter:drop-shadow(0 0 8px white);
+
+}
+
+.signature h3{
+
+    color:#fbbf24;
+
+    margin:5px 0;
+
+}
+
+.signature span{
+
+    color:#94a3b8;
+
+}
+
+.seal{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    margin:60px auto;
+
+    background:
+    radial-gradient(circle,#FFD700,#EAB308,#CA8A04);
+
+    color:#111827;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 0 25px gold,
+    inset 0 0 15px white;
+
+    animation:sealGlow 2s infinite alternate;
+
+}
+
+.seal h3{
+
+    font-size:18px;
+
+    text-align:center;
+
+    margin-top:8px;
+
+}
+
+@keyframes sealGlow{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.05);
+
+        box-shadow:
+        0 0 45px gold,
+        inset 0 0 20px white;
+
+    }
+
+}
+
+.certificate-buttons{
+
+    margin-top:50px;
+
+}
+
+.download-btn{
+
+    padding:16px 40px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:linear-gradient(90deg,#7c3aed,#2563eb);
+
+    color:white;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.download-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px #7c3aed;
+
+}
+@media print{
+
+    nav{
+
+        display:none;
+
+    }
+
+    .download-btn{
+
+        display:none;
+
+    }
+
+    body{
+
+        background:white;
+
+    }
+
+}

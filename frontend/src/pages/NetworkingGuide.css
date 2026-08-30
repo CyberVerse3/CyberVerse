@@ -1,0 +1,568 @@
+/* ============================================================
+   CYBERVERSE — NETWORKING GUIDE
+   ============================================================ */
+
+.networking-guide-page {
+    min-height: 100vh;
+    background: #05070d;
+    color: #ffffff;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.networking-guide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 25px 80px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.networking-guide-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.networking-guide-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 18px;
+
+    border: 1px solid #00eaff;
+    border-radius: 30px;
+
+    color: #00eaff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    background: rgba(0, 234, 255, 0.05);
+}
+
+.networking-guide-header h1 {
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #7c3aed
+    );
+
+    -webkit-background-clip: text;
+     background-clip: text; 
+    -webkit-text-fill-color: transparent;
+     color: transparent;
+}
+
+.networking-guide-header p {
+    max-width: 720px;
+
+    margin: 18px auto 0;
+
+    color: #9ca3af;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   PROGRESS CARD
+   ============================================================ */
+
+.networking-progress-card {
+    max-width: 700px;
+
+    margin: 35px auto 0;
+    padding: 22px 25px;
+
+    background: #0b0f19;
+
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 30px rgba(0, 234, 255, 0.04);
+}
+
+.networking-progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 14px;
+
+    color: #9ca3af;
+}
+
+.networking-progress-info strong {
+    color: #00eaff;
+}
+
+/* ============================================================
+   PROGRESS BAR
+   ============================================================ */
+
+.networking-progress-bar {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    background: #151b27;
+
+    border-radius: 10px;
+}
+
+.networking-progress-fill {
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #7c3aed
+    );
+
+    border-radius: inherit;
+
+    transition: width 0.4s ease;
+}
+
+.networking-progress-percent {
+    margin-top: 10px;
+
+    text-align: right;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+/* ============================================================
+   MODULES
+   ============================================================ */
+
+.networking-modules {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ============================================================
+   MODULE
+   ============================================================ */
+
+.networking-module {
+    overflow: hidden;
+
+    background: #0b0f19;
+
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.networking-module:hover {
+    border-color: rgba(0, 234, 255, 0.35);
+
+    box-shadow:
+        0 0 25px rgba(0, 234, 255, 0.04);
+}
+
+/* ============================================================
+   MODULE HEADER
+   ============================================================ */
+
+.networking-module-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 22px;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.networking-module-header:hover {
+    background: rgba(255, 255, 255, 0.015);
+}
+
+/* ============================================================
+   MODULE NUMBER
+   ============================================================ */
+
+.networking-module-number {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    margin-right: 18px;
+
+    border: 1px solid rgba(0, 234, 255, 0.35);
+    border-radius: 12px;
+
+    color: #00eaff;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    background: rgba(0, 234, 255, 0.05);
+}
+
+/* ============================================================
+   MODULE INFO
+   ============================================================ */
+
+.networking-module-info {
+    flex: 1;
+}
+
+.networking-module-info h2 {
+    margin: 0 0 6px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.networking-module-info p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+/* ============================================================
+   MODULE PROGRESS
+   ============================================================ */
+
+.networking-module-progress {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-left: 20px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.networking-module-arrow {
+    display: inline-block;
+
+    color: #00eaff;
+
+    transition: transform 0.25s ease;
+}
+
+.networking-module-arrow.open {
+    transform: rotate(180deg);
+}
+
+/* ============================================================
+   LESSONS
+   ============================================================ */
+
+.networking-lessons {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid #1f2937;
+}
+
+/* ============================================================
+   LESSON
+   ============================================================ */
+
+.networking-lesson {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 18px 22px;
+
+    border: none;
+    border-bottom: 1px solid rgba(31, 41, 55, 0.7);
+
+    background: transparent;
+
+    color: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.networking-lesson:last-child {
+    border-bottom: none;
+}
+
+.networking-lesson:hover:not(:disabled) {
+    background: rgba(0, 234, 255, 0.035);
+
+    padding-left: 28px;
+}
+
+/* ============================================================
+   LESSON NUMBER
+   ============================================================ */
+
+.networking-lesson-number {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    margin-right: 16px;
+
+    border: 1px solid #263244;
+    border-radius: 10px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.networking-lesson.completed
+    .networking-lesson-number {
+    border-color: #22c55e;
+
+    background: rgba(34, 197, 94, 0.08);
+
+    color: #22c55e;
+}
+
+/* ============================================================
+   LESSON INFO
+   ============================================================ */
+
+.networking-lesson-info {
+    flex: 1;
+}
+
+.networking-lesson-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #00eaff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.networking-lesson-info h3 {
+    margin: 0;
+
+    color: #e5e7eb;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ============================================================
+   XP
+   ============================================================ */
+
+.networking-lesson-xp {
+    margin-right: 22px;
+
+    color: #a78bfa;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.networking-lesson-status {
+    min-width: 78px;
+
+    text-align: right;
+
+    color: #6b7280;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.networking-lesson.completed
+    .networking-lesson-status {
+    color: #22c55e;
+}
+
+.networking-lesson:not(.completed):not(.locked)
+    .networking-lesson-status {
+    color: #00eaff;
+}
+
+/* ============================================================
+   LOCKED LESSON
+   ============================================================ */
+
+.networking-lesson.locked {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+}
+
+.networking-lesson.locked:hover {
+    padding-left: 22px;
+
+    background: transparent;
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .networking-guide {
+        padding: 35px 15px 60px;
+    }
+
+    .networking-guide-header h1 {
+        font-size: 34px;
+    }
+
+    .networking-guide-header p {
+        font-size: 14px;
+    }
+
+    .networking-module-header {
+        padding: 18px;
+    }
+
+    .networking-module-number {
+        width: 44px;
+        height: 44px;
+
+        margin-right: 12px;
+    }
+
+    .networking-module-info h2 {
+        font-size: 16px;
+    }
+
+    .networking-module-info p {
+        font-size: 12px;
+    }
+
+    .networking-module-progress {
+        gap: 8px;
+
+        margin-left: 10px;
+    }
+
+    .networking-lesson {
+        padding: 16px;
+    }
+
+    .networking-lesson:hover:not(:disabled) {
+        padding-left: 20px;
+    }
+
+    .networking-lesson-number {
+        width: 34px;
+        height: 34px;
+
+        margin-right: 10px;
+    }
+
+    .networking-lesson-info h3 {
+        font-size: 13px;
+    }
+
+    .networking-lesson-xp {
+        display: none;
+    }
+
+    .networking-lesson-status {
+        min-width: auto;
+
+        margin-left: 10px;
+
+        font-size: 9px;
+    }
+
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .networking-guide-header h1 {
+        font-size: 28px;
+    }
+
+    .networking-module-number {
+        display: none;
+    }
+
+    .networking-module-header {
+        padding: 16px;
+    }
+
+    .networking-module-progress span:first-child {
+        display: none;
+    }
+
+    .networking-lesson-label {
+        font-size: 9px;
+    }
+
+    .networking-lesson-info h3 {
+        font-size: 12px;
+    }
+
+}

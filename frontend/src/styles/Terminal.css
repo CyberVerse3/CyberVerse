@@ -1,0 +1,321 @@
+
+/* =========================
+   TERMINAL PAGE
+========================= */
+
+.terminal-page {
+    min-height: calc(100vh - 70px);
+    padding: 50px;
+    background: #05070b;
+    color: #e6edf3;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.terminal-page-header {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.terminal-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #00ff88;
+}
+
+.terminal-page-header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+.terminal-page-header p {
+    margin: 0;
+    color: #8b949e;
+    font-size: 16px;
+}
+
+
+/* =========================
+   TERMINAL WINDOW
+========================= */
+
+.cyber-terminal {
+    max-width: 1200px;
+    height: 620px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #0d1117;
+
+    border: 1px solid #30363d;
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(0, 255, 136, 0.05);
+
+    cursor: text;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   TERMINAL HEADER
+========================= */
+
+.terminal-header {
+    height: 44px;
+
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+
+    background: #161b22;
+
+    border-bottom: 1px solid #30363d;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TERMINAL BUTTONS
+========================= */
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+.terminal-dot.red {
+    background: #ff5f56;
+}
+
+.terminal-dot.yellow {
+    background: #ffbd2e;
+}
+
+.terminal-dot.green {
+    background: #27c93f;
+}
+
+
+/* =========================
+   TERMINAL TITLE
+========================= */
+
+.terminal-title {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 13px;
+
+    color: #8b949e;
+
+    font-family:
+        "Courier New",
+        monospace;
+}
+
+
+/* =========================
+   TERMINAL BODY
+========================= */
+
+.terminal-body {
+    flex: 1;
+
+    padding: 22px;
+
+    overflow-y: auto;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(0, 255, 136, 0.025),
+            transparent 35%
+        ),
+        #0d1117;
+}
+
+
+/* =========================
+   TERMINAL SCROLLBAR
+========================= */
+
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: #0d1117;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 10px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #484f58;
+}
+
+
+/* =========================
+   TERMINAL LINES
+========================= */
+
+.terminal-line {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.terminal-line.system {
+    color: #8b949e;
+}
+
+.terminal-line.command {
+    margin-top: 8px;
+    color: #00ff88;
+}
+
+.terminal-line.output {
+    color: #c9d1d9;
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   TERMINAL INPUT
+========================= */
+
+.terminal-input-line {
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   PROMPT
+========================= */
+
+.terminal-prompt {
+    color: #00ff88;
+
+    white-space: nowrap;
+
+    margin-right: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.terminal-input-line input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #e6edf3;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 15px;
+
+    caret-color: #00ff88;
+}
+
+.terminal-input-line input::selection {
+    background: rgba(0, 255, 136, 0.2);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .terminal-page {
+        padding: 25px 15px;
+    }
+
+    .terminal-page-header h1 {
+        font-size: 28px;
+    }
+
+    .terminal-page-header p {
+        font-size: 14px;
+    }
+
+    .cyber-terminal {
+        height: 560px;
+
+        border-radius: 8px;
+    }
+
+    .terminal-body {
+        padding: 16px;
+
+        font-size: 13px;
+    }
+
+    .terminal-prompt {
+        font-size: 13px;
+    }
+
+    .terminal-input-line input {
+        font-size: 13px;
+    }
+
+    .terminal-title {
+        font-size: 11px;
+    }
+}
+

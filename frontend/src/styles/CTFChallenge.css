@@ -1,0 +1,571 @@
+css
+/* =========================
+   CTF CHALLENGE PAGE
+========================= */
+
+.challenge-page {
+    min-height: 100vh;
+    padding: 45px 30px 80px;
+
+    background: #050816;
+    color: #ffffff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.challenge-header {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-btn {
+    padding: 9px 16px;
+
+    border: 1px solid #1f2937;
+    border-radius: 9px;
+
+    background: #0b1120;
+    color: #d1d5db;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.solved-status,
+.active-status {
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.solved-status {
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid #22c55e;
+    color: #4ade80;
+}
+
+.active-status {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.challenge-title {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.challenge-title h1 {
+    margin: 0 0 12px;
+
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.challenge-title p {
+    max-width: 800px;
+
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.challenge-details {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 18px;
+
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+
+    background: #0b1120;
+}
+
+.detail-icon {
+    font-size: 25px;
+}
+
+.detail-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail-item small {
+    color: #6b7280;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.detail-item strong {
+    font-size: 18px;
+}
+
+
+/* =========================
+   HINT
+========================= */
+
+.hint-box {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    gap: 13px;
+
+    padding: 18px 20px;
+
+    border: 1px solid #374151;
+    border-radius: 14px;
+
+    background: #0c1628;
+
+    color: #d1d5db;
+
+    line-height: 1.6;
+}
+
+.hint-box > div {
+    flex: 1;
+}
+
+.hint-box strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #38bdf8;
+}
+
+.hint-box p {
+    margin: 0;
+
+    color: #9ca3af;
+}
+
+
+/* =========================
+   FLAG SECTION
+========================= */
+
+.flag-section {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+
+    padding: 25px;
+
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+
+    background: #0b1120;
+}
+
+.flag-section h2 {
+    margin: 0 0 7px;
+
+    font-size: 22px;
+}
+
+.flag-section > p {
+    margin: 0 0 20px;
+
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FLAG FORM
+========================= */
+
+.flag-form {
+    display: flex;
+    gap: 12px;
+}
+
+.flag-form input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 14px 16px;
+
+    border: 1px solid #374151;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #050816;
+    color: #ffffff;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.flag-form input:focus {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 0 3px rgba(56, 189, 248, 0.08);
+}
+
+.flag-form input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit-btn {
+    padding: 13px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #38bdf8;
+    color: #020617;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(56, 189, 248, 0.2);
+}
+
+.submit-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.challenge-message {
+    margin-top: 18px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.success-message {
+    border: 1px solid #22c55e;
+    background: rgba(34, 197, 94, 0.08);
+    color: #4ade80;
+}
+
+.error-message {
+    border: 1px solid #ef4444;
+    background: rgba(239, 68, 68, 0.08);
+    color: #f87171;
+}
+
+
+/* =========================
+   SOLVED CARD
+========================= */
+
+.already-solved {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+
+    border: 1px solid #22c55e;
+    border-radius: 14px;
+
+    background: rgba(34, 197, 94, 0.07);
+}
+
+.already-solved > span {
+    font-size: 30px;
+}
+
+.already-solved strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #4ade80;
+}
+
+.already-solved p {
+    margin: 0;
+
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+
+/* =========================
+   NOT FOUND / LOCKED
+========================= */
+
+.challenge-error,
+.challenge-locked {
+    max-width: 700px;
+    margin: 80px auto;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+
+    background: #0b1120;
+}
+
+.challenge-error h1,
+.challenge-locked h1 {
+    margin: 0 0 12px;
+
+    font-size: 30px;
+}
+
+.challenge-error p,
+.challenge-locked p {
+    margin: 0 0 25px;
+
+    color: #9ca3af;
+}
+
+.locked-icon {
+    margin-bottom: 15px;
+
+    font-size: 50px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .challenge-page {
+        padding: 30px 16px 60px;
+    }
+
+    .challenge-title h1 {
+        font-size: 30px;
+    }
+
+    .challenge-details {
+        grid-template-columns: 1fr;
+    }
+
+    .flag-form {
+        flex-direction: column;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .challenge-header {
+        margin-bottom: 22px;
+    }
+
+    .challenge-title h1 {
+        font-size: 25px;
+    }
+
+    .challenge-title p {
+        font-size: 14px;
+    }
+
+    .flag-section {
+        padding: 18px;
+    }
+
+    .already-solved {
+        padding: 16px;
+    }
+}
+/* =========================
+   CHALLENGE NAVIGATION
+========================= */
+
+.challenge-navigation {
+    max-width: 1000px;
+
+    margin: 25px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.navigation-btn {
+    padding: 12px 18px;
+
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+
+    background: #0b1120;
+    color: #cbd5e1;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.navigation-btn:hover {
+    border-color: #38bdf8;
+
+    color: #38bdf8;
+
+    background: #0f172a;
+
+    transform: translateY(-1px);
+}
+
+.back-navigation {
+    justify-self: center;
+}
+
+.challenge-navigation
+.navigation-btn:last-child {
+    justify-self: end;
+}
+
+.category-complete {
+    justify-self: end;
+
+    padding: 12px 18px;
+
+    border: 1px solid #22c55e;
+    border-radius: 10px;
+
+    background: rgba(34, 197, 94, 0.08);
+
+    color: #4ade80;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .challenge-navigation {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .back-navigation {
+        grid-column: 1 / -1;
+
+        grid-row: 1;
+
+        justify-self: center;
+    }
+
+    .challenge-navigation
+    .navigation-btn:last-child,
+    .category-complete {
+        justify-self: end;
+    }
+
+    .navigation-btn {
+        width: 100%;
+
+        padding: 11px 12px;
+
+        font-size: 12px;
+    }
+}
+

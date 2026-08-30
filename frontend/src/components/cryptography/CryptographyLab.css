@@ -1,0 +1,180 @@
+.crypto-container{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e1b4b,#312e81);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.crypto-card{
+    width:850px;
+    max-width:100%;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:25px;
+    padding:35px;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.crypto-card h1{
+    text-align:center;
+    color:#c084fc;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#d1d5db;
+    margin-bottom:30px;
+}
+
+.progress{
+    width:100%;
+    height:14px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:30px;
+}
+
+.progress-fill{
+    height:100%;
+    background:linear-gradient(90deg,#8b5cf6,#ec4899);
+    transition:.4s;
+}
+
+.question-box{
+    background:#111827;
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:25px;
+}
+
+.question-box h3{
+    color:#c084fc;
+    margin-bottom:15px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.option-btn{
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:#4f46e5;
+    color:white;
+    font-size:16px;
+    transition:.3s;
+}
+
+.option-btn:hover{
+    background:#7c3aed;
+    transform:translateY(-3px);
+}
+
+.hint-btn{
+    margin-top:25px;
+    background:#9333ea;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hint-btn:hover{
+    background:#a855f7;
+}
+
+.hint-box{
+    margin-top:20px;
+    background:#312e81;
+    padding:18px;
+    border-left:5px solid #c084fc;
+    border-radius:12px;
+}
+
+.result-box{
+    margin-top:25px;
+    background:#111827;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:bold;
+    color:#4ade80;
+}
+
+.next-btn{
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#8b5cf6;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.next-btn:hover{
+    background:#a855f7;
+}
+
+.complete-box{
+    text-align:center;
+    padding:35px;
+    background:#111827;
+    border-radius:20px;
+}
+
+.complete-box h2{
+    color:#4ade80;
+    margin-bottom:20px;
+}
+
+.complete-box h3{
+    color:#facc15;
+    margin-top:15px;
+}
+
+.restart-btn{
+    margin-top:30px;
+    padding:14px 30px;
+    border:none;
+    border-radius:12px;
+    background:#ec4899;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.restart-btn:hover{
+    background:#db2777;
+}
+
+@media(max-width:768px){
+
+.crypto-card{
+    padding:20px;
+}
+
+.options{
+    grid-template-columns:1fr;
+}
+
+.option-btn{
+    width:100%;
+}
+
+}

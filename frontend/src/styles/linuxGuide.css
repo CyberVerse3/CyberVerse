@@ -1,0 +1,870 @@
+/* =========================================
+   LINUX GUIDE
+========================================= */
+
+.linux-guide-page {
+    min-height: 100vh;
+    padding: 40px;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(0, 255, 170, 0.08),
+            transparent 35%
+        ),
+        #050b12;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.linux-guide-hero {
+    max-width: 1250px;
+    margin: 0 auto 35px;
+    min-height: 430px;
+    padding: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 25, 38, 0.96),
+            rgba(5, 15, 24, 0.96)
+        );
+
+    border: 1px solid rgba(0, 255, 170, 0.18);
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 50px rgba(0, 255, 170, 0.06);
+
+    overflow: hidden;
+}
+
+
+.linux-guide-hero-content {
+    max-width: 650px;
+}
+
+
+.linux-guide-badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(0, 255, 170, 0.3);
+    border-radius: 30px;
+
+    background: rgba(0, 255, 170, 0.06);
+
+    color: #00ffaa;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+.linux-guide-hero h1 {
+    margin: 0;
+
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+
+.linux-guide-hero h1 span {
+    color: #00ffaa;
+}
+
+
+.linux-guide-hero p {
+    max-width: 620px;
+    margin: 22px 0 30px;
+
+    color: #9aa9b8;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.linux-guide-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+
+.linux-guide-primary-btn,
+.linux-guide-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 22px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.linux-guide-primary-btn {
+    background: #00ffaa;
+    color: #03100b;
+
+    box-shadow:
+        0 0 25px rgba(0, 255, 170, 0.15);
+}
+
+
+.linux-guide-primary-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 35px rgba(0, 255, 170, 0.3);
+}
+
+
+.linux-guide-secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #ffffff;
+}
+
+
+.linux-guide-secondary-btn:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.linux-guide-hero-visual {
+    position: relative;
+
+    width: 430px;
+    min-width: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.linux-guide-penguin {
+    position: absolute;
+    top: -90px;
+    right: 35px;
+
+    font-size: 120px;
+
+    filter:
+        drop-shadow(
+            0 0 25px rgba(0, 255, 170, 0.18)
+        );
+
+    animation:
+        linuxPenguinFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes linuxPenguinFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================================
+   TERMINAL PREVIEW
+========================================= */
+
+.linux-guide-terminal-preview {
+    width: 100%;
+
+    margin-top: 100px;
+
+    border: 1px solid rgba(0, 255, 170, 0.2);
+    border-radius: 14px;
+
+    background: #03070a;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+.terminal-preview-header {
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0 12px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    background: #091017;
+}
+
+
+.terminal-preview-header span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #53606b;
+}
+
+
+.terminal-preview-body {
+    padding: 22px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+.terminal-preview-body p {
+    margin: 0;
+}
+
+
+.terminal-user {
+    color: #00ffaa;
+}
+
+
+.terminal-path {
+    color: #6ecbff;
+}
+
+
+.terminal-command {
+    color: #ffffff;
+}
+
+
+.terminal-output {
+    color: #8c9aa7;
+}
+
+
+.terminal-cursor {
+    color: #00ffaa;
+
+    animation:
+        terminalCursorBlink 1s infinite;
+}
+
+
+@keyframes terminalCursorBlink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.linux-guide-stats {
+    max-width: 1250px;
+
+    margin: 0 auto 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.linux-guide-stat-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    background: rgba(10, 20, 30, 0.7);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.linux-guide-stat-card:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(0, 255, 170, 0.25);
+}
+
+
+.linux-guide-stat-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0, 255, 170, 0.08);
+
+    font-size: 22px;
+}
+
+
+.linux-guide-stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.linux-guide-stat-info strong {
+    font-size: 24px;
+}
+
+
+.linux-guide-stat-info span {
+    color: #7e8b97;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   LEARNING PATH
+========================================= */
+
+.linux-guide-learning-path {
+    max-width: 1250px;
+
+    margin: 0 auto 70px;
+}
+
+
+.linux-guide-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+}
+
+
+.linux-guide-section-heading > div span,
+.linux-guide-small-label {
+    color: #00ffaa;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.linux-guide-section-heading h2 {
+    margin: 8px 0 0;
+
+    font-size: 32px;
+}
+
+
+.linux-guide-section-heading p {
+    max-width: 420px;
+
+    margin: 0;
+
+    color: #7f8d9a;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   MODULES
+========================================= */
+
+.linux-guide-modules {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.linux-guide-module {
+    display: grid;
+
+    grid-template-columns:
+        55px
+        70px
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px 24px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    background:
+        rgba(9, 18, 27, 0.85);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.linux-guide-module.available:hover {
+    transform: translateX(5px);
+
+    border-color:
+        rgba(0, 255, 170, 0.28);
+
+    background:
+        rgba(0, 255, 170, 0.035);
+}
+
+
+.linux-guide-module.locked {
+    opacity: 0.55;
+}
+
+
+.linux-guide-module-number {
+    color: #52616e;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+.linux-guide-module-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(0, 255, 170, 0.07);
+
+    font-size: 25px;
+}
+
+
+.linux-guide-module-content {
+    min-width: 0;
+}
+
+
+.linux-guide-module-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.linux-guide-module-title h3 {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+.linux-guide-module-content > p {
+    margin: 7px 0 10px;
+
+    color: #7f8d9a;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.module-status {
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.available-status {
+    color: #00ffaa;
+
+    background:
+        rgba(0, 255, 170, 0.08);
+}
+
+
+.locked-status {
+    color: #7f8d9a;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+}
+
+
+.linux-guide-module-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color: #687784;
+
+    font-size: 12px;
+}
+
+
+.linux-guide-module-button {
+    min-width: 90px;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    border: 1px solid rgba(0, 255, 170, 0.25);
+
+    background:
+        rgba(0, 255, 170, 0.07);
+
+    color: #00ffaa;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.linux-guide-module-button:hover {
+    transform: translateY(-2px);
+
+    background:
+        rgba(0, 255, 170, 0.13);
+}
+
+
+.locked-button {
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    color: #667480;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   TERMINAL CONNECTION
+========================================= */
+
+.linux-guide-terminal-section {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        0.9fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(0, 255, 170, 0.15);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 255, 170, 0.045),
+            rgba(7, 18, 28, 0.95)
+        );
+}
+
+
+.linux-guide-terminal-content h2 {
+    margin: 12px 0 18px;
+
+    font-size: 40px;
+
+    line-height: 1.15;
+}
+
+
+.linux-guide-terminal-content h2 span {
+    color: #00ffaa;
+}
+
+
+.linux-guide-terminal-content p {
+    max-width: 580px;
+
+    margin-bottom: 25px;
+
+    color: #8796a3;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   TERMINAL CODE
+========================================= */
+
+.linux-guide-terminal-code {
+    padding: 28px;
+
+    border: 1px solid rgba(0, 255, 170, 0.15);
+
+    border-radius: 14px;
+
+    background: #03070a;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+
+.code-line {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 6px;
+
+    color: #ffffff;
+}
+
+
+.code-prompt {
+    color: #00ffaa;
+}
+
+
+.code-output {
+    margin: 0 0 14px 25px;
+
+    color: #748592;
+}
+
+
+.typing-line {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .linux-guide-hero {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 40px;
+    }
+
+
+    .linux-guide-hero-visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .linux-guide-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .linux-guide-terminal-section {
+        grid-template-columns: 1fr;
+
+        padding: 40px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .linux-guide-page {
+        padding: 20px;
+    }
+
+
+    .linux-guide-hero {
+        padding: 30px 22px;
+    }
+
+
+    .linux-guide-hero h1 {
+        font-size: 38px;
+    }
+
+
+    .linux-guide-hero p {
+        font-size: 15px;
+    }
+
+
+    .linux-guide-hero-visual {
+        display: none;
+    }
+
+
+    .linux-guide-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .linux-guide-section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .linux-guide-section-heading h2 {
+        font-size: 27px;
+    }
+
+
+    .linux-guide-module {
+        grid-template-columns:
+            45px
+            55px
+            1fr;
+
+        padding: 17px;
+    }
+
+
+    .linux-guide-module-button {
+        grid-column: 3;
+
+        justify-self: start;
+    }
+
+
+    .linux-guide-terminal-section {
+        padding: 30px 22px;
+    }
+
+
+    .linux-guide-terminal-content h2 {
+        font-size: 32px;
+    }
+
+}
