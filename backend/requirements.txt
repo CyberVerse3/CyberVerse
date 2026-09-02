@@ -53,3 +53,5 @@ mypy==1.7.1
 # Optional: Payment processing
 # stripe==7.4.0
 # paypalrestsdk==1.7.1
+
+fastapi-cli
