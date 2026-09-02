@@ -1,5 +1,5 @@
 # Core Dependencies
-fastapi==0.104.1
+fastapi[standard]
 uvicorn[standard]==0.24.0
 pydantic==2.5.0
 pydantic-settings==2.1.0
@@ -54,4 +54,3 @@ mypy==1.7.1
 # stripe==7.4.0
 # paypalrestsdk==1.7.1
 
-fastapi-cli
