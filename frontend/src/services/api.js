@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:8000/api/v1'
+const API_URL = 'https://cyberverse.fastapicloud.dev/api/v1'
 
 export async function getNews() {
   const response = await fetch(`${API_URL}/news`)

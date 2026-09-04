@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import './Register.css'
 
-const API_URL = 'http://127.0.0.1:8000/api/v1'
+const API_URL = 'https://cyberverse.fastapicloud.dev/api/v1'
 
 function Register() {
 
