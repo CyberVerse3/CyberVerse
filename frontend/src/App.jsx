@@ -25,7 +25,7 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 
 import Dashboard from "./pages/Dashboard.jsx";
-import Profile from "./pages/Profile.jsx";
+import Profile from "./pages/profile.jsx";
 
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import FinalExam from "./pages/FinalExam";
